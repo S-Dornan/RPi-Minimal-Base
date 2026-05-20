@@ -1,4 +1,4 @@
-# RPi-Distroless-Base
+# RPi-Minimal-Base
 Base Distroless image for Raspberry Pi hardware monitoring stack
 
 > Copyright (C) 2026 Sam Dornan
