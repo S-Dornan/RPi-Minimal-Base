@@ -4,10 +4,9 @@
 name: Build and Push Pi Prod Base
 
 on:
-  workflow_dispatch:
-  push:
-    tags:
-      - 'v*'
+  schedule:
+    - cron: '0 0 * * 0' # Runs every Sunday at midnight
+  workflow_dispatch:
 
 jobs:
   build-and-push-base:
@@ -66,3 +65,4 @@ jobs:
           provenance: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          no-cache: true
